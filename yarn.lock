@@ -1131,6 +1131,16 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@expo-google-fonts/dancing-script@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/dancing-script/-/dancing-script-0.1.0.tgz#3ea156d406a7e9ed0b8dc1ba490da9f47aa787cc"
+  integrity sha512-MJi/kkPB+uWzoLDbd0G7F107DKAyWf8z+88JxrgSfGYZr+hpp1cFB3FgmXm7ZvuaNEqOgsOHxRnxZuReb+XyiQ==
+
+"@expo-google-fonts/libre-baskerville@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/libre-baskerville/-/libre-baskerville-0.1.0.tgz#42b46cab4eacbcbe197dc942b64b5a23ee2a759e"
+  integrity sha512-XvviYKQQCyMi0fwkr40Q5iw3MD1Z9J/DX0I6jxEFrIkR9pOcEaJTOwnF5WQ99/Nk9MmFdrqeJ91FRQqF2ax8dg==
+
 "@expo/config-plugins@1.0.28", "@expo/config-plugins@^1.0.18":
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-1.0.28.tgz#6c3911d493bc329bf9ef5c99585564539b1a57e1"
