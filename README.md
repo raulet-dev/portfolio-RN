@@ -1,6 +1,6 @@
 # portfolio-RN
 
-My portfolio make using React Native
+My portfolio made using React Native
 
     npm i -g expo-cli
     npm i -g yarn
