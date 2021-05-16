@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add expo-font@~9.1.0 @expo-google-fonts/Dancing-Script
+  C:\Program Files\nodejs\node.exe C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js info
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\rey_b\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\rey_b\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python39\Scripts;C:\Python39;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;D:\Programas\GtkSharp\2.12\bin;C:\Program Files\dotnet;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files (x86)\Vim\vim82;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files (x86)\dotnet;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Users\rey_b\.windows-build-tools\python27;C:\Users\rey_b\AppData\Local\Microsoft\WindowsApps;D:\Programas\Microsoft VS Code\bin;C:\Users\rey_b\AppData\Local\Microsoft\WindowsApps;C:\Users\rey_b\.dotnet\tools;C:\Users\rey_b\AppData\Roaming\npm;C:\tools\neovim\Neovim\bin
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\rey_b\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python39\Scripts;C:\Python39;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;D:\Programas\GtkSharp\2.12\bin;C:\Program Files\dotnet;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files (x86)\Vim\vim82;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files (x86)\dotnet;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Users\rey_b\.windows-build-tools\python27;C:\Users\rey_b\AppData\Local\Microsoft\WindowsApps;D:\Programas\Microsoft VS Code\bin;C:\Users\rey_b\AppData\Local\Microsoft\WindowsApps;C:\Users\rey_b\.dotnet\tools;C:\Users\rey_b\AppData\Roaming\npm;C:\tools\neovim\Neovim\bin
 
 Yarn version: 
   1.22.10
@@ -14,17 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@expo-google-fonts%2fDancing-Script: Not found
-      at Request.params.callback [as _callback] (C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
-      at Request.self.callback (C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
-      at Request.emit (events.js:314:20)
-      at Request.<anonymous> (C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
-      at Request.emit (events.js:314:20)
-      at IncomingMessage.<anonymous> (C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
-      at Object.onceWrapper (events.js:420:28)
-      at IncomingMessage.emit (events.js:326:22)
-      at endReadableNT (_stream_readable.js:1223:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  TypeError: Cannot read property '1' of null
+      at parsePackageName (C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:100696:29)
+      at Object.<anonymous> (C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:88351:90)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\rey_b\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
@@ -37,7 +32,10 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
+      "@expo-google-fonts/dancing-script": "^0.1.0",
+      "@expo-google-fonts/libre-baskerville": "^0.1.0",
       "expo": "~41.0.1",
+      "expo-font": "~9.1.0",
       "expo-status-bar": "~1.0.4",
       "react": "16.13.1",
       "react-dom": "16.13.1",
@@ -1186,6 +1184,16 @@ Lockfile:
     dependencies:
       exec-sh "^0.3.2"
       minimist "^1.2.0"
+  
+  "@expo-google-fonts/dancing-script@^0.1.0":
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/@expo-google-fonts/dancing-script/-/dancing-script-0.1.0.tgz#3ea156d406a7e9ed0b8dc1ba490da9f47aa787cc"
+    integrity sha512-MJi/kkPB+uWzoLDbd0G7F107DKAyWf8z+88JxrgSfGYZr+hpp1cFB3FgmXm7ZvuaNEqOgsOHxRnxZuReb+XyiQ==
+  
+  "@expo-google-fonts/libre-baskerville@^0.1.0":
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/@expo-google-fonts/libre-baskerville/-/libre-baskerville-0.1.0.tgz#42b46cab4eacbcbe197dc942b64b5a23ee2a759e"
+    integrity sha512-XvviYKQQCyMi0fwkr40Q5iw3MD1Z9J/DX0I6jxEFrIkR9pOcEaJTOwnF5WQ99/Nk9MmFdrqeJ91FRQqF2ax8dg==
   
   "@expo/config-plugins@1.0.28", "@expo/config-plugins@^1.0.18":
     version "1.0.28"

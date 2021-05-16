@@ -1,5 +1,19 @@
 [
   {
+    "title": "Portfolio React Native",
+    "description": "This portfolio.",
+    "languages": "JS/React Native",
+    "link": "https://github.com/raulet-dev/portfolio-RN",
+    "preview": "portfolio-rn.png"
+  },
+  {
+    "title": "Retro Royale",
+    "description": "Battle royale multiplayer game. Playable demo at github page.",
+    "languages": "Unity/C#",
+    "link": "https://github.com/raulet-dev/retro-royale",
+    "preview": "retro-royale.png"
+  },
+  {
     "title": "Portfolio",
     "description": "First version of my Portfolio.",
     "languages": "HTML/CSS/JS",
@@ -7,31 +21,24 @@
     "preview": "porfolio-tmb.jpg"
   },
   {
-    "title": "Saporo Best Lap",
-    "description": "A time attack racing game.",
+    "title": "Sapporo Best Lap",
+    "description": "A time attack racing game. Playable demo at github page.",
     "languages": "Unity/C#",
-    "link": "https://github.com/raulet-dev/portfolio",
-    "preview": "saporobestlap.gif"
+    "link": "https://github.com/raulet-dev/sapporobestlap",
+    "preview": "sapporobestlap.png"
   },
   {
     "title": "Rauru Strike",
-    "description": "Destroy the debrif around the earth.",
+    "description": "Destroy the debrif around the earth. Playable demo at github page.",
     "languages": "Unity/C#",
-    "link": "https://github.com/raulet-dev/portfolio",
-    "preview": "raurustrike.gif"
+    "link": "https://github.com/raulet-dev/rauru-strike",
+    "preview": "raurustrike.jpg"
   },
   {
     "title": "Minesweeper",
-    "description": "A classic",
+    "description": "A classic. Playable demo at github page.",
     "languages": "Unity/C#",
-    "link": "https://github.com/raulet-dev/portfolio",
-    "preview": "minesweeper.gif"
-  },
-  {
-    "title": "Asteroid Crush",
-    "description": "Kill them all and survive",
-    "languages": "Lua",
-    "link": "https://github.com/raulet-dev/portfolio",
-    "preview": "asteroidcrush.gif"
+    "link": "https://github.com/raulet-dev/minesweeper",
+    "preview": "minesweeper.png"
   }
 ]
