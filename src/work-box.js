@@ -11,10 +11,11 @@ const WorkBox = (params) => {
   let [fontsLoaded] = useFonts({
     LibreBaskerville_400Regular,
   });
-
   useEffect(()=>{
     setSize(params.size)
   })
+
+  const Picture = require('./img/' + params.preview)
 
 
   const styles = StyleSheet.create({
@@ -31,7 +32,6 @@ const WorkBox = (params) => {
       width: size+4,
       height: (size/1.77777)+4,
       overflow: 'hidden',
-      backgroundColor: 'blue',
       borderRadius: 20,
     },
     bottom: {
@@ -98,7 +98,7 @@ const WorkBox = (params) => {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <Image source={require('./img/' + params.preview)} style={styles.preview}/>
+        <Image source={Picture} style={styles.preview}/>
       </View>
       <View style={styles.bottom}>
         <View style={styles.description}>

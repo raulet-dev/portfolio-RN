@@ -4,41 +4,41 @@
     "description": "This portfolio.",
     "languages": "JS/React Native",
     "link": "https://github.com/raulet-dev/portfolio-RN",
-    "preview": "portfolio-rn.png"
+    "preview": "portfolio-rn.svg"
   },
   {
     "title": "Retro Royale",
     "description": "Battle royale multiplayer game. Playable demo at github page.",
     "languages": "Unity/C#",
     "link": "https://github.com/raulet-dev/retro-royale",
-    "preview": "retro-royale.png"
+    "preview": "retroroyale.svg"
   },
   {
     "title": "Portfolio",
     "description": "First version of my Portfolio.",
     "languages": "HTML/CSS/JS",
     "link": "https://github.com/raulet-dev/portfolio",
-    "preview": "porfolio-tmb.jpg"
+    "preview": "portfolio-html.svg"
   },
   {
     "title": "Sapporo Best Lap",
     "description": "A time attack racing game. Playable demo at github page.",
     "languages": "Unity/C#",
     "link": "https://github.com/raulet-dev/sapporobestlap",
-    "preview": "sapporobestlap.png"
+    "preview": "sapporobestlap.svg"
   },
   {
     "title": "Rauru Strike",
     "description": "Destroy the debrif around the earth. Playable demo at github page.",
     "languages": "Unity/C#",
     "link": "https://github.com/raulet-dev/rauru-strike",
-    "preview": "raurustrike.jpg"
+    "preview": "raurustrike.svg"
   },
   {
     "title": "Minesweeper",
     "description": "A classic. Playable demo at github page.",
     "languages": "Unity/C#",
     "link": "https://github.com/raulet-dev/minesweeper",
-    "preview": "minesweeper.png"
+    "preview": "minesweeper.svg"
   }
 ]

@@ -1,0 +1,6 @@
+trace mode: grayscale
+Grays: 3
+Paths: 1%
+Corners: 100%
+Noise: 100px
+Method: Overlapping
