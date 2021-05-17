@@ -6,7 +6,7 @@ import github from './img/github.svg';
 import linkedin from './img/linkedin.svg';
 import mail from './img/email.svg';
 import pdf from './img/pdf.svg';
-
+import resume from './dwn/resume.pdf'
 
 const Contact = () => {
 
@@ -115,7 +115,7 @@ const Contact = () => {
         <TouchableOpacity style={[styles.rombo, {backgroundColor: (hoverPdf)?'lightgrey':''}]}
         onMouseEnter={()=>{setHoverPdf(true)}}
         onMouseLeave={()=>{setHoverPdf(false)}}
-        onPress={({url = 'https://raulet.dev/dwn/resume.pdf'})=>{(Platform.OS == 'web')?window.open(url,'_blank'):Linking.openURL(url)}}
+        onPress={({url = resume})=>{(Platform.OS == 'web')?window.open(url,'_blank'):Linking.openURL(url)}}
         >
           <Image source={pdf} style={[styles.img,{tintColor: (hoverPdf)?'darkorange':'#222'}]}/>
         </TouchableOpacity>
