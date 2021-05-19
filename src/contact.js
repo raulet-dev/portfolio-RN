@@ -1,30 +1,35 @@
-import React, {useState, useEffect}from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Linking, Platform } from 'react-native';
-import useWindowSize from './utils/useWindowSize';
-import {useFonts, LibreBaskerville_400Regular} from '@expo-google-fonts/libre-baskerville'
-import github from './img/github.svg';
-import linkedin from './img/linkedin.svg';
-import mail from './img/email.svg';
-import pdf from './img/pdf.svg';
+import React, { useState, useEffect, useCallback } from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import useWindowSize from './utils/useWindowSize'
+import {
+  useFonts,
+  LibreBaskerville_400Regular,
+} from '@expo-google-fonts/libre-baskerville'
+import github from './img/github.svg'
+import linkedin from './img/linkedin.svg'
+import mail from './img/email.svg'
+import pdf from './img/pdf.svg'
 import resume from './dwn/resume.pdf'
+import ContactButton from './contactButton'
 
 const Contact = () => {
-
-  const [hoverGithub, setHoverGithub] = useState(false)
-  const [hoverLinkedin, setHoverLinkedin] = useState(false)
-  const [hoverMail, setHoverMail] = useState(false)
-  const [hoverPdf, setHoverPdf] = useState(false)
-
-  const winSize = useWindowSize();
+  const winSize = useWindowSize()
 
   let [fontsLoaded] = useFonts({
     LibreBaskerville_400Regular,
-  });
-
-  const [orientation, setOrientation] = useState('landscape')
-  useEffect(()=>{
-    setOrientation((winSize.height > winSize.width)?'portrait':'landscape')
   })
+
+  const [contactSize, setContactSize] = useCallback(useState(0))
+
+  const [orientation, setOrientation] = useCallback(useState('landscape'))
+  useEffect(() => {
+    setOrientation(winSize.height > winSize.width ? 'portrait' : 'landscape')
+    if (orientation === 'landscape') {
+      setContactSize(winSize.height)
+    } else {
+      setContactSize(winSize.width)
+    }
+  }, [winSize])
 
   const styles = StyleSheet.create({
     container: {
@@ -32,11 +37,12 @@ const Contact = () => {
       alignItems: 'strech',
       justifyContent: 'center',
       flexDirection: 'column',
-      marginHorizontal: (orientation === 'landscape')?'15%':'5%',
+      marginHorizontal: orientation === 'landscape' ? '15%' : '5%',
     },
     top: {
       flex: 1,
-      marginHorizontal: (orientation === 'landscape')?winSize.height/14:winSize.width/20,
+      marginHorizontal:
+        orientation === 'landscape' ? winSize.height / 14 : winSize.width / 20,
 
       justifyContent: 'center',
     },
@@ -45,84 +51,62 @@ const Contact = () => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignSelf: 'space-around',
-      marginHorizontal: (orientation === 'landscape')?winSize.height/14:winSize.width/20,
-      marginTop: (orientation === 'landscape')?0:winSize.width/6,
-    },
-    rombo: {
-      height: (orientation === 'landscape')?winSize.height/7:winSize.width/7,
-      width: (orientation === 'landscape')?winSize.height/7:winSize.width/7,
-      borderWidth: 2,
-      transform: [{rotate: '45deg'}],
-      alignSelf: 'center',
-      flexWrap: 'wrap',
-      overflow: 'hidden',
-      justifyContent: 'center',
+      marginHorizontal:
+        orientation === 'landscape' ? winSize.height / 14 : winSize.width / 20,
+      marginTop: orientation === 'landscape' ? 0 : winSize.width / 6,
     },
     text: {
       textAlign: 'center',
       fontFamily: 'LibreBaskerville_400Regular',
-      fontSize: (orientation === 'landscape')?0.045*useWindowSize().height:0.045*useWindowSize().width,
+      fontSize:
+        orientation === 'landscape'
+          ? 0.045 * winSize.height
+          : 0.045 * winSize.width,
       color: '#333',
-      },
+    },
     contrast: {
       color: 'darkorange',
     },
-    img: {
-      height: (orientation === 'landscape')?winSize.height/11:winSize.width/11,
-      width: (orientation === 'landscape')?winSize.height/11:winSize.width/11,
-      tintColor: '#222',
-      transform: [{rotate: '-45deg'}],
-      alignSelf: 'center',
-    }
-  });
-
-  var url
+  })
 
   return (
     <View style={styles.container}>
       <View style={styles.top}></View>
       <View style={styles.top}>
         <Text style={styles.text}>
-          I'm currently <Text style={[styles.text, styles.contrast]}>open for</Text> a full time <Text style={[styles.text, styles.contrast]}>job </Text>
+          I'm currently{' '}
+          <Text style={[styles.text, styles.contrast]}>open for</Text> a full
+          time <Text style={[styles.text, styles.contrast]}>job </Text>
           or freelance work.
         </Text>
         <Text style={styles.text}>
-          Please don't hesitate to <Text style={[styles.text, styles.contrast]}>contact me</Text>!
+          Please don't hesitate to{' '}
+          <Text style={[styles.text, styles.contrast]}>contact me</Text>!
         </Text>
       </View>
       <View style={styles.bottom}>
-        <TouchableOpacity style={[styles.rombo, {backgroundColor: (hoverGithub)?'lightgrey':''}]}
-        onMouseEnter={()=>{setHoverGithub(true)}}
-        onMouseLeave={()=>{setHoverGithub(false)}}
-        onPress={({url = 'https://github.com/raulet-dev'})=>{(Platform.OS == 'web')?window.open(url,'_blank'):Linking.openURL(url)}}
-        >
-          <Image source={github} style={[styles.img,{tintColor: (hoverGithub)?'darkorange':'#222'}]}/>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.rombo, {backgroundColor: (hoverLinkedin)?'lightgrey':''}]}
-        onMouseEnter={()=>{setHoverLinkedin(true)}}
-        onMouseLeave={()=>{setHoverLinkedin(false)}}
-        onPress={({url = 'https://www.linkedin.com/in/ra%C3%BAl-pay%C3%A1-morales-106a5813/'})=>{(Platform.OS == 'web')?window.open(url,'_blank'):Linking.openURL(url)}}
-        >
-          <Image source={linkedin} style={[styles.img,{tintColor: (hoverLinkedin)?'darkorange':'#222'}]}/>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.rombo, {backgroundColor: (hoverMail)?'lightgrey':''}]}
-        onMouseEnter={()=>{setHoverMail(true)}}
-        onMouseLeave={()=>{setHoverMail(false)}}
-        onPress={({url = 'mailto:contact@raulet.dev'})=>{(Platform.OS == 'web')?window.open(url,'_blank'):Linking.openURL(url)}}
-        >
-          <Image source={mail} style={[styles.img,{tintColor: (hoverMail)?'darkorange':'#222'}]}/>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.rombo, {backgroundColor: (hoverPdf)?'lightgrey':''}]}
-        onMouseEnter={()=>{setHoverPdf(true)}}
-        onMouseLeave={()=>{setHoverPdf(false)}}
-        onPress={({url = resume})=>{(Platform.OS == 'web')?window.open(url,'_blank'):Linking.openURL(url)}}
-        >
-          <Image source={pdf} style={[styles.img,{tintColor: (hoverPdf)?'darkorange':'#222'}]}/>
-        </TouchableOpacity>
+        <ContactButton
+          url={'https://github.com/raulet-dev'}
+          size={contactSize}
+          img={github}
+        />
+        <ContactButton
+          url={
+            'https://www.linkedin.com/in/ra%C3%BAl-pay%C3%A1-morales-106a5813/'
+          }
+          size={contactSize}
+          img={linkedin}
+        />
+        <ContactButton
+          url={'mailto:contact@raulet.dev'}
+          size={contactSize}
+          img={mail}
+        />
+        <ContactButton url={resume} size={contactSize} img={pdf} />
       </View>
       <View style={styles.top}></View>
     </View>
-  );
+  )
 }
 
-export default Contact
+export default React.memo(Contact)
