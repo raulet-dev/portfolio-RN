@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useContext } from 'react'
-import { StyleSheet, View } from 'react-native'
+import React, { useState, useEffect, useCallback  } from 'react'
+import { StyleSheet, View, ScrollView } from 'react-native'
 import useWindowSize from './src/utils/useWindowSize'
 import Title from './src/title'
 import Footer from './src/footer'

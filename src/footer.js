@@ -61,7 +61,7 @@ const Footer = (params) => {
         title={'Skills'}
         fontSize={fontSize}
         circleSize={circleSize}
-      />
+      />      
       <View style={styles.line}></View>
       <FooterButton
         id={2}
@@ -72,6 +72,13 @@ const Footer = (params) => {
       <View style={styles.line}></View>
       <FooterButton
         id={3}
+        title={'Projects'}
+        fontSize={fontSize}
+        circleSize={circleSize}
+      />
+      <View style={styles.line}></View>
+      <FooterButton
+        id={4}
         title={'Contact'}
         fontSize={fontSize}
         circleSize={circleSize}
