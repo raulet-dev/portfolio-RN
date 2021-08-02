@@ -4,7 +4,8 @@ import useWindowSize from './utils/useWindowSize'
 import Home from './home'
 import Skills from './skills'
 import Contact from './contact'
-import Work from './work'
+import WorkExperience from './work-experience'
+import WorkProjects from './work-projects'
 import { Context } from './context'
 
 const Body = () => {
@@ -29,9 +30,12 @@ const Body = () => {
         setContent(<Skills />)
         break
       case 2:
-        setContent(<Work />)
-        break
+          setContent(<WorkExperience />)
+          break
       case 3:
+        setContent(<WorkProjects />)
+        break
+      case 4:
         setContent(<Contact />)
         break
       default:

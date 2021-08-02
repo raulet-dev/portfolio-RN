@@ -14,7 +14,7 @@ import {
 import Workbox from './work-box'
 import arrow from './img/arrow.svg'
 
-const Work = () => {
+const WorkProjects = () => {
   const winSize = useCallback(useWindowSize())
 
   const [flatRef, setFlatRef] = useCallback(useState(''))
@@ -152,4 +152,4 @@ const Work = () => {
   )
 }
 
-export default React.memo(Work)
+export default React.memo(WorkProjects)
